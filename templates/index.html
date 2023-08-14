@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reconocimiento Facial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ url_for('static', filename='ico/recognizer.ico') }}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!--<div class="loader">
+        <div class="spinner-border text-info" style="width: 70px;height: 70px;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>-->
+    <div class="app">
+        {% if welcome %}
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/welcome">DT Solutions</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                        <ul class="d-flex navbar-nav">
+                            <li class="nav-item dropdown">
+                                <form method="POST" action="{{ url_for('logout') }}">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{name}}</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" type="submit" href="/">Salir</a>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="justify-content-center" style="text-align: -webkit-center;">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Dashboard</div>
+                            <div class="card-body">
+                                You are logged in!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="login">
+                <div class="container-fluid">
+                    <div class="container text-center" style="display: grid;align-content: center; height:100vh;">
+                        <div class="row" style="padding: 50px;background: white; place-content: center;">
+                            <div class="section_login_facial col-lg-8">
+                                <button class="init_video" type="button"><img title="Presionar para comenzar reconocimiento facial" class="img-fluid recognizer_image" src="{{ url_for('static', filename='img/recognizer.jpg') }}"></button>
+                                <div class="section_video"></div>
+                            </div>
+                            <div class="section_login col-lg-4" style="align-self: center;">
+                                <form  method="POST" action="{{ url_for('welcome') }}">
+                                    <h1>Login</h1>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" name="codigo" id="floatingInput" placeholder="20179911A" required>
+                                        <label for="floatingInput">Código de Trabajador</label>
+                                    </div>
+                                    <div id="output"></div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
+                                        <label for="floatingPassword">Contraseña</label>
+                                    </div>
+                                    <div class="d-grid gap-2 mt-3">
+                                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script> 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
