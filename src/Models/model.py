@@ -1,6 +1,4 @@
-import sqlite3
-from Connection.connection import get,insert,update_delete
-
+from Connection.connection import get
 
 def get_login(codigo,password):
     query = f"SELECT idUser,codigo,password,name FROM user where codigo ='{codigo}' and password='{password}'"

@@ -1,6 +1,5 @@
 from flask import Flask, render_template,redirect,url_for
-from src.Routes.recognition import recognitionRoute
-from src.Routes.login import loginRoute
+from src.Routes.route import loginRoute
 '''from pyngrok import ngrok
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -15,7 +14,6 @@ def index():
 def page_not_found(e):
     return redirect(url_for('index'))
 
-recognitionRoute(app)
 loginRoute(app)
 
 if __name__ == '__main__':
