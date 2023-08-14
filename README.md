@@ -29,3 +29,6 @@ Paso 3: Ejecutar py app.py.
 3- Si desea detener, nuevamente dar click en el video mostrado.
 
 ## Facial Recognition
+![login](https://github.com/BryanDaniellAR/python_flask_login_faceRecognition_v1.0_2023/assets/97413969/e9b3ffb5-966c-4e0f-98ac-d3cdb47794e6)
+![login_face](https://github.com/BryanDaniellAR/python_flask_login_faceRecognition_v1.0_2023/assets/97413969/b09adfb3-8b9d-4160-ba02-d08197e619fe)
+![welcome](https://github.com/BryanDaniellAR/python_flask_login_faceRecognition_v1.0_2023/assets/97413969/3ba0923e-5aae-4f4b-9736-bf8082a27deb)
