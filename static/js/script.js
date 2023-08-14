@@ -6,14 +6,14 @@
     document.querySelector('.app').style.display = 'block';
 });*/
 // Evento load para el contenido de la aplicación
-/*window.addEventListener('load', function () {
+window.addEventListener('load', function () {
     setTimeout(function () {
         // Oculta el loader una vez que la página esté completamente cargada
         document.querySelector('.loader').style.display = 'none';
         // Muestra el contenido de la aplicación
         document.querySelector('.app').style.display = 'block';
     }, 2000);
-});*/
+});
 $(document).ready(function() {
     // Al cargar la página, ocultar la sección de video
 

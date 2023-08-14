@@ -25,7 +25,7 @@ img.video_img {
     padding: 0px;
     border: none;
 }
-/*.app {
+.app {
     display: none;
 }
 .loader{ 
@@ -33,4 +33,4 @@ img.video_img {
     height: 100vh;
     justify-content: space-around;
     align-content: center;
-}*/
+}
