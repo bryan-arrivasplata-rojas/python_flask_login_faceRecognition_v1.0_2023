@@ -1,3 +1,3 @@
 Flask==2.3.2
 opencv-contrib-python==4.5.4.58
-pyngrok=6.0.0
+pyngrok==6.0.0
